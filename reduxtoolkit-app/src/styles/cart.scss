@@ -1,0 +1,30 @@
+.table-container{
+    margin-top: 3rem;
+    width: 100%;
+
+    background: #292929;
+
+    text-align: left;
+
+    border-collapse: collapse;
+
+    tbody{
+        &:last-child{
+            border-radius: 16px;
+        }
+    }
+
+    td,th{
+        border: 1px solid #292929;
+        padding: .5rem 1rem;
+    }
+
+    th{
+        background-color: #dbdbdb;
+        color:#e24101;
+    }
+
+    td{
+        background-color: #d43c00;
+    }
+}
