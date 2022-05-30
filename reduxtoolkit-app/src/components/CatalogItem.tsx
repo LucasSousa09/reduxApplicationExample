@@ -26,7 +26,7 @@ export const CatalogItem: React.FC<CatalogItemProps> = ({product}) => {
     return (
         <article className={`item-container ${doesNotHasStock && 'disable-container'}`} key={product.id}>
             <strong>{product.title}</strong>
-            <span>{product.price}</span>
+            <span>{product.price.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}</span>
 
             <button 
                 type='button'

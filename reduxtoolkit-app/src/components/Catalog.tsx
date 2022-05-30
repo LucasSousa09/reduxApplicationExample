@@ -11,18 +11,7 @@ export function Catalog(){
     
     useEffect(() => {
         api.get('products')
-        .then( response => response.data)
-        .then( data => {
-            const formatedData = data.map((catalogItem: IProduct) => {
-                return {
-                    id: catalogItem.id,
-                    title: catalogItem.title,
-                    price: catalogItem.price.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})
-                }
-            })
-
-            setCatalog(formatedData)
-        })
+        .then( response => setCatalog(response.data))
     },[])
 
 

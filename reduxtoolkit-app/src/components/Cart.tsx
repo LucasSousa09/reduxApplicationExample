@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { IState } from '../store'
 import { ICartItem } from '../store/modules/cart/types'
@@ -23,9 +23,9 @@ export const Cart: React.FC = () => {
                     cart.map(item => (
                         <tr key={item.product.id}>
                             <td>{item.product.title}</td>
-                            <td>{item.product.price}</td>
+                            <td>{item.product.price.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}</td>
                             <td>{item.quantity}</td>
-                            <td>{(item.quantity * item.product.price).toFixed(2)}</td>
+                            <td>{(item.quantity * item.product.price).toLocaleString('pt-BR', {style:'currency', currency:'BRL'})}</td>
                         </tr>
                     ))
                 }
