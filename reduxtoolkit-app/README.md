@@ -1,6 +1,7 @@
 # Redux Toolkit application
 
 - Uma aplicação de carrinho de compras, no qual o controle de estado é feito por meio do Redux.
+- Essa aplicação foi feita utilizando o pacote '@reduxjs/toolkit' e importando o { configureStore }
 
 ## Rodando a aplicação
 
